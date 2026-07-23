@@ -6,8 +6,30 @@ class Demo{
 		f1.setSize(300,300);
 		f1.setLocationRelativeTo(null);
 		f1.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+
+		f1.setLayout(new FlowLayout(FlowLayout.LEFT));
+
+		JButton btAdd = new JButton("Add");
+		JButton btDelete = new JButton("Delete");
+		JButton btUpdate = new JButton("Update");
+		JButton btView = new JButton("View");
 		
-		JButton[] btArray = new JButton[5];
+		btAdd.setFont(new Font("",1,30));
+		f1.add(btAdd);
+
+		btDelete.setFont(new Font("",1,30));
+		f1.add(btDelete);
+
+		btUpdate.setFont(new Font("",1,30));
+		f1.add(btUpdate);
+
+		btView.setFont(new Font("",1,30));
+		f1.add(btView);
+		
+		f1.setVisible(true);
+		
+		
+		/*JButton[] btArray = new JButton[5];
 		String[] buttonText = {"North","East","South","West","Center"};
 		
 		for(int i=0; i<5; i++){
@@ -19,32 +41,6 @@ class Demo{
 			
 		}
 		f1.pack();
-		f1.setVisible(true);
-
-		//JButton b1 = new JButton();
-		//JButton b2 = new JButton();
-		//JButton b3 = new JButton();
-		//JButton b4 = new JButton();
-		//JButton b5 = new JButton();
-		
-		/*b1.setText("North");
-		b1.setFont(new Font("",1,30));
-		f1.add("North",b1);
-
-		b2.setText("East");
-		b2.setFont(new Font("",1,30));
-		f1.add("East",b2);
-
-		b3.setText("South");
-		b3.setFont(new Font("",1,30));
-		f1.add("South",b3);
-
-		b4.setText("West");
-		b4.setFont(new Font("",1,30));
-		f1.add("West",b4);
-
-		b5.setText("Center");
-		b5.setFont(new Font("",1,30));
-		f1.add("Center",b5);*/
+		f1.setVisible(true);*/
 	}
 }
