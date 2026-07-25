@@ -151,7 +151,7 @@ class Demo{
 	}
 }*/
 
-import java.awt.*;
+/*import java.awt.*;
 import javax.swing.*;
 
 class Demo{
@@ -180,5 +180,30 @@ class Demo{
 		f1.add("Center",Btn);
 		
 		f1.setVisible(true);
+	}
+}*/
+
+import java.awt.*;
+import javax.swing.*;
+
+class Calculator extends JFrame{
+	Calculator(String title){
+		setTitle("Calculator");
+	}
+}
+class Demo{
+	public static void main(String[] args){
+		JFrame f1 = new JFrame("JFrame");
+		f1.setSize(300,300);
+		f1.setLocationRelativeTo(null);
+		f1.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+		
+		Calculator c1 = new Calculator("Calculator");
+		c1.setSize(300,300);
+		c1.setLocationRelativeTo(null);
+		c1.setDefaultCloseOperation(Calculator.DISPOSE_ON_CLOSE);
+		
+		f1.setVisible(true);
+		c1.setVisible(true);
 	}
 }
