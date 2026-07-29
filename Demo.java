@@ -189,21 +189,28 @@ import javax.swing.*;
 class Calculator extends JFrame{
 	Calculator(String title){
 		setTitle("Calculator");
+		
+		setSize(300,300);
+		setLocationRelativeTo(null);
+		setDefaultCloseOperation(Calculator.DISPOSE_ON_CLOSE);
+
+		JButton btNorth=new JButton("North");
+		btNorth.setFont(new Font("",1,30));
+		add("North",btNorth);
 	}
 }
 class Demo{
 	public static void main(String[] args){
-		JFrame f1 = new JFrame("JFrame");
-		f1.setSize(300,300);
-		f1.setLocationRelativeTo(null);
-		f1.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-		
+
 		Calculator c1 = new Calculator("Calculator");
-		c1.setSize(300,300);
-		c1.setLocationRelativeTo(null);
-		c1.setDefaultCloseOperation(Calculator.DISPOSE_ON_CLOSE);
-		
-		f1.setVisible(true);
 		c1.setVisible(true);
+
+		//c1.setSize(300,300);
+		//c1.setLocationRelativeTo(null);
+		//c1.setDefaultCloseOperation(Calculator.DISPOSE_ON_CLOSE);
+		
+		// JButton btNorth=new JButton("North");
+		// btNorth.setFont(new Font("",1,30));
+		// c1.add("North",btNorth);
 	}
 }
