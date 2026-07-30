@@ -217,7 +217,7 @@ class Demo{
 	}
 }*/
 
-import java.awt.*;
+/*import java.awt.*;
 import javax.swing.*;
 class Calculator extends JFrame{
 	private JTextField txtDisplay;
@@ -250,5 +250,79 @@ class Demo{
 	public static void main(String args[]){
 		Calculator c1=new Calculator("Calculator");	
 		c1.setVisible(true);
+	}
+}*/
+
+import java.awt.*;
+import javax.swing.*;
+
+class StudentForm extends JFrame{
+	private JTextField txtId;
+	private JTextField txtName;
+	private JTextField txtDbms;
+	private JTextField txtPrf;
+	
+	private JButton addBtn;
+	private JButton cancleBtn;
+	
+	StudentForm(String title){
+		setTitle("Student Form");
+		setSize(600,400);
+		setLocationRelativeTo(null);
+		setDefaultCloseOperation(StudentForm.DISPOSE_ON_CLOSE);
+		
+		JLabel titleLabel=new JLabel("Add Student Form");
+		titleLabel.setFont(new Font("",1,30));
+		titleLabel.setHorizontalAlignment(JLabel.CENTER);
+		add("North",titleLabel);
+		
+		JPanel buttonPanel=new JPanel();
+		buttonPanel.setLayout(new FlowLayout(FlowLayout.RIGHT));
+		JButton addBtn=new JButton("Add Student");
+		JButton cancleBtn=new JButton("Cancle");
+		addBtn.setFont(new Font("",1,15));
+		cancleBtn.setFont(new Font("",1,15));
+		buttonPanel.add(addBtn);
+		buttonPanel.add(cancleBtn);
+		add("South",buttonPanel);
+		
+		JPanel lablePanel=new JPanel();
+		lablePanel.setLayout(new GridLayout(4,1));
+		JLabel stId=new JLabel("Student ID -:");
+		JLabel Name=new JLabel("Name -:");
+		JLabel PRF=new JLabel("PRF Marks -:");
+		JLabel DBMS=new JLabel("DBMS Marks -:");
+		stId.setFont(new Font("",1,20));
+		Name.setFont(new Font("",1,20));
+		DBMS.setFont(new Font("",1,20));
+		PRF.setFont(new Font("",1,20));
+		lablePanel.add(stId);
+		lablePanel.add(Name);
+		lablePanel.add(PRF);
+		lablePanel.add(DBMS);
+		add("West",lablePanel);
+		
+		JPanel txtPanel=new JPanel();
+		txtPanel.setLayout(new GridLayout(4,1));
+		JTextField txtId=new JTextField(8);
+		JTextField txtName=new JTextField(15);
+		JTextField txtDbms=new JTextField(4);
+		JTextField txtPrf=new JTextField(4);
+		txtId.setSize(500,500);
+		txtId.setFont(new Font("",1,20));
+		txtName.setFont(new Font("",1,20));
+		txtPrf.setFont(new Font("",1,20));
+		txtDbms.setFont(new Font("",1,20));
+		txtPanel.add(txtId);
+		txtPanel.add(txtName);
+		txtPanel.add(txtDbms);
+		txtPanel.add(txtPrf);
+		add("East",txtPanel);
+	}
+}
+class Demo{
+	public static void main(String[] args){
+		StudentForm s1=new StudentForm("studentForm");
+		s1.setVisible(true);
 	}
 }
