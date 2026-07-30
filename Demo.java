@@ -187,6 +187,8 @@ import java.awt.*;
 import javax.swing.*;
 
 class Calculator extends JFrame{
+	private JButton btNorth;
+	
 	Calculator(String title){
 		setTitle("Calculator");
 		
