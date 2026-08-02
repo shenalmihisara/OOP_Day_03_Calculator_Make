@@ -313,11 +313,24 @@ class StudentForm extends JFrame{
 		txtName.setFont(new Font("",1,20));
 		txtPrf.setFont(new Font("",1,20));
 		txtDbms.setFont(new Font("",1,20));
-		txtPanel.add(txtId);
-		txtPanel.add(txtName);
-		txtPanel.add(txtDbms);
-		txtPanel.add(txtPrf);
-		add("East",txtPanel);
+
+		JPanel idTxtPanel=new JPanel(new FlowLayout(FlowLayout.LEFT));
+		idTxtPanel.add(txtId);
+		txtPanel.add(idTxtPanel);
+
+		JPanel nameTxtPanel=new JPanel(new FlowLayout(FlowLayout.LEFT));
+		nameTxtPanel.add(txtName);
+		txtPanel.add(nameTxtPanel);
+		
+		JPanel dbmsTxtPanel=new JPanel(new FlowLayout(FlowLayout.LEFT));
+		dbmsTxtPanel.add(txtDbms);
+		txtPanel.add(dbmsTxtPanel);
+
+		JPanel prfTxtPanel=new JPanel(new FlowLayout(FlowLayout.LEFT));		
+		prfTxtPanel.add(txtPrf);
+		txtPanel.add(prfTxtPanel);
+		
+		add("Center",txtPanel);
 	}
 }
 class Demo{
