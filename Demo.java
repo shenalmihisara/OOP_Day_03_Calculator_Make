@@ -519,7 +519,7 @@ class Calculator extends JFrame{
 		slider.addChangeListener(new ChangeListener() {
 			public void stateChanged(ChangeEvent e) {
 				int value=slider.getValue();
-				txtTitle.setText(value+"");
+				txtTitle.setText(value+"%");
 			}
 		});
 		add(slider);
