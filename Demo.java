@@ -253,7 +253,7 @@ class Demo{
 	}
 }*/
 
-import java.awt.*;
+/*import java.awt.*;
 import javax.swing.*;
 
 class StudentForm extends JFrame{
@@ -337,5 +337,37 @@ class Demo{
 	public static void main(String[] args){
 		StudentForm s1=new StudentForm("studentForm");
 		s1.setVisible(true);
+	}
+}*/
+
+import java.awt.*;
+import javax.swing.*;
+import java.awt.event.*;
+
+class Calculator extends JFrame{
+	private JButton btExit;
+	
+	Calculator(String Title){
+		setSize(300,300);
+		setLocationRelativeTo(null);
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+		setLayout(new FlowLayout());
+		
+		btExit=new JButton("Exit");
+		btExit.setFont(new Font("",1,30));
+		btExit.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent evt){
+				System.out.println("Exited....");
+				System.exit(0);
+			}
+		});
+		add("North",btExit);
+	}
+}
+
+class Demo{
+	public static void main(String[] args){
+		Calculator c1=new Calculator("Calculator");
+		c1.setVisible(true);
 	}
 }
