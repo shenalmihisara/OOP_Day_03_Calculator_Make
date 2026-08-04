@@ -372,7 +372,7 @@ class Demo{
 	}
 }*/
 
-import javax.swing.*;
+/*import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
@@ -474,5 +474,51 @@ class Demo{
 	public static void main(String args[]){
 		new AddStudentForm().setVisible(true);
 	}
+}*/
+
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+class Calculator extends JFrame{
+	private JButton btExit;
+	private JTextField txtTitle;
+	
+	Calculator(String Title){
+		setTitle("Calculator");
+		setSize(500,300);
+		setLocationRelativeTo(null);
+		setDefaultCloseOperation(Calculator.DISPOSE_ON_CLOSE);
+		setLayout(new FlowLayout());
+		
+		btExit=new JButton("Exit");
+		btExit.setFont(new Font("",1,30));
+		btExit.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent evt){
+				System.out.println("Exited...");
+				System.exit(0);
+			}
+		});
+		add(btExit);
+		
+		txtTitle=new JTextField(10);
+		txtTitle.setFont(new Font("",1,30));
+		txtTitle.addKeyListener(new KeyAdapter(){
+			public void keyReleased(KeyEvent evt){
+				String title=txtTitle.getText();
+				setTitle(title);
+			}
+		});
+
+		add(txtTitle);
+	}
 }
 
+class Demo{
+	public static void main(String[] args){
+		Calculator c1=new Calculator("Calculator");
+		c1.setVisible(true);
+		
+	}
+}
