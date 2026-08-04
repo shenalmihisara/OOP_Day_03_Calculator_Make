@@ -480,10 +480,12 @@ class Demo{
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import javax.swing.event.*;
 
 class Calculator extends JFrame{
 	private JButton btExit;
 	private JTextField txtTitle;
+	private JSlider slider;
 	
 	Calculator(String Title){
 		setTitle("Calculator");
@@ -510,8 +512,17 @@ class Calculator extends JFrame{
 				setTitle(title);
 			}
 		});
-
 		add(txtTitle);
+		
+		slider=new JSlider(1,10,200,10);
+		slider.setFont(new Font("",1,30));
+		slider.addChangeListener(new ChangeListener() {
+			public void stateChanged(ChangeEvent e) {
+				int value=slider.getValue();
+				txtTitle.setText(value+"");
+			}
+		});
+		add(slider);
 	}
 }
 
